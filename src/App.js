@@ -1,7 +1,16 @@
+import { Provider, useSelector } from "react-redux";
 import "./App.css";
+import Body from "./components/Body";
+import { store } from "./utils/store";
 
 function App() {
-  return <h1 className=" font-bold text-center underline">Hello World</h1>;
+  return (
+    <>
+      <Provider store={store}>
+        <Body />
+      </Provider>
+    </>
+  );
 }
 
 export default App;
